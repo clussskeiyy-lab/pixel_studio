@@ -386,3 +386,86 @@ details > p {
   margin-top: 34px;
 }
 
+/* Cara Order*/
+.order {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 56px;
+}
+
+.order h2 {
+  text-align: left;
+}
+
+.langkah {
+  counter-reset: no;
+}
+
+.langkah li {
+  counter-increment: no;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 14px;
+}
+
+.langkah li::before {
+  content: counter(no);
+  width: 28px;
+  height: 28px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #0a0a0a;
+  color: #fafafa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bayar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.bayar span {
+  border: 1px solid #e2e2e2;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cek {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px 24px;
+  font-size: 14px;
+}
+
+.cek li::before {
+  content: "✓ ";
+  font-weight: 800;
+}
+
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 56px;
+  padding: 28px 32px;
+  border-radius: 28px;
+  background: #0a0a0a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.strip h2 {
+  margin: 0;
+  text-align: left;
+}
