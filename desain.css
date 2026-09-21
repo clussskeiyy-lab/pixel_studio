@@ -222,10 +222,73 @@ img {
   gap: 24px 16px;
 }
 
+.fitur div {
+  padding: 24px 20px;
+}
+
+.fitur h3 {
+  font-size: 11px; 
+  letter-spacing: .06em;
+}
+
+.fitur p {
+  font-size: 11px;
+  color: #666;
+}
+
+.kategori {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.kotak-kategori {
+  background-color: #111;
+  color: white;
+  width: 200px;
+  padding: 25px 15px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.kotak-kategori:hover {
+  background-color: #333;
+}
+
+.kotak-kategori img {
+  width: 45px;
+  height: 45px;
+  margin: 0 2px 15px 2px;
+}
+
+.kotak-kategori p {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.kotak-kategori div {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 15px;
+}
+
+/* Kartu Produk */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px 16px;
+}
+
 #katalog h3 {
   font-size: 13px;
   letter-spacing: .lem;
   margin: 40px 0 16px;
+}
+
+#katalog h3:first-child {
+  margin-top: 0;
 }
 
 #katalog h3 small {
@@ -249,4 +312,42 @@ img {
   border-radius: 28px;
   transition: transform .3s;
 }
-  
+
+#katalog article:hover img {
+  transform: scale(1.03);
+}
+
+#katalog h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 12px 0 2px;
+}
+
+#katalog h4::after {
+  content: " ▾";
+  font-size: 10px;
+  color: #666;
+}
+
+#katalog details[open] h4::after {
+  content: " ▴";
+}
+
+summary p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+details > p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #666;
+  background: #eee;
+  border-radius: 16px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  white-space: pre-line;
+}
+
