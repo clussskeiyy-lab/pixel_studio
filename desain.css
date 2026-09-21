@@ -216,4 +216,37 @@ img {
 }
 
 /*Keuntungan dan Kategori*/
+.fitur {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px 16px;
+}
 
+#katalog h3 {
+  font-size: 13px;
+  letter-spacing: .lem;
+  margin: 40px 0 16px;
+}
+
+#katalog h3 small {
+  color: #666;
+  font-weight: 500;
+}
+
+#katalog summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+#katalog summary::-webkit-details-marker {
+  display: none;
+}
+
+#katalog summary img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 28px;
+  transition: transform .3s;
+}
+  
