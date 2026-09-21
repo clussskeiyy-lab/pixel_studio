@@ -160,7 +160,7 @@ body:has(.pilih:checked) nav label::after {
 }
 
 /*Hero*/
-.hero {
+.banner {
   display: flex;
   flex-warp: wrap;
   align-items: center;
@@ -180,13 +180,13 @@ body:has(.pilih:checked) nav label::after {
   color: #ccc;
 }
 
-.hero h1 {
+.banner h1 {
   font-size: clamp(36px, 6vw, 64px);
   line-height: 1.05;
   margin: 12px 0 18px;
 }
 
-.hero p:not(.kicker) {
+.banner p:not(.kicker) {
   max-width: 420px;
   color: #bbb;
   font-size: 14px;
