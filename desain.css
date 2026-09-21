@@ -13,9 +13,9 @@ html {
 
 body {
 
-  font-family: 'Monstreat', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
 
-  font-family: 'Monstrreat', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
 
   background: #fafafa;
   color: #0a0a0a;
@@ -63,10 +63,10 @@ main > section {
   padding: 12px 26px;
   border-radius: 999px;
   background: #0a0a0a;
-  color: #fafafa
+  color: #fafafa;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: .lem;
+  letter-spacing: .1em;
   text-align: center;
 }
 
@@ -80,8 +80,8 @@ main > section {
   background: #000;
   color: #fff;
   text-align: center;
-  font-size: 11 px;
-  fonnt-weight: 700;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: .08em;
   padding: 10px;
 }
@@ -92,11 +92,11 @@ header, footer {
 
 header {
   position: sticky;
-  top: o;
+  top: 0;
   z-index: 5;
   background: #fafafa;
   border-bottom: 1px solid #e2e2e2;
-  display: felx;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -114,7 +114,7 @@ header {
   background: none;
   height: 38px;
   max-width: 140px;
-  object-fill: contain;
+  object-fit: contain;
   border-radius: 0;
 } 
 
@@ -156,13 +156,13 @@ nav label {
 
 /*Penanda isi keranjang*/
 body:has(.pilih:checked) nav label::after {
-  content: "•";
+  content: " •";
 }
 
 /*Hero*/
 .hero {
   display: flex;
-  flex-warp: warp;
+  flex-warp: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
@@ -181,7 +181,7 @@ body:has(.pilih:checked) nav label::after {
 }
 
 .hero h1 {
-  font-size: clamp(36px, 6nw, 64px);
+  font-size: clamp(36px, 6vw, 64px);
   line-height: 1.05;
   margin: 12px 0 18px;
 }
@@ -214,7 +214,7 @@ body:has(.pilih:checked) nav label::after {
 img {
   display: block;
   object-fit: cover;
-  border-radius: 26%
+  border-radius: 26%;
   background: white;
   color: #666;
   font-size: 10px;
@@ -224,8 +224,9 @@ img {
 /*Keuntungan dan Kategori*/
 .fitur {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  border-block: 1px solid #e2e2e2;
+  padding: 0;
 }
 
 .fitur div {
@@ -474,4 +475,237 @@ details > p {
 .strip h2 {
   margin: 0;
   text-align: left;
+}
+
+/* Logo 3 Lapis */
+.marquee {
+   flex: 1;
+   min-width: 260px;
+   overflow: hidden;
+   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.jalur {
+   display: flex;
+   width: max-content;
+   animation: geser 10s linear infinite;
+}
+
+/* Stop Sorot Mouse */
+.jalur:hover {
+   animation-play-state: paused;
+}
+
+.grup {
+   display: flex;
+   gap: 10px;
+   padding-right: 10px;
+}
+
+.grup img {
+   width: 38px;
+   height: 38px;
+}
+
+/* Geser */
+@keyframes geser {
+   to {
+      transform: translateX(-50%);
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .jalur {
+      animation: none;
+   }
+}
+
+/* Footer */
+footer {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 32px;
+   padding-block: 44px 32px;
+   border-top: 1px solid #e2e2e2;
+}
+
+footer h5 {
+   font-size: 11px;
+   letter-spacing: .12em;
+   margin-bottom: 14px;
+}
+
+footer li, footer p {
+   font-size: 12px;
+   color: #666;
+   margin-bottom: 8px;
+}
+
+footer .brand {
+   margin-bottom: 12px;
+   color: #0a0a0a;
+}
+
+footer .btn {
+   margin-top: 6px;
+}
+
+.hak {
+   grid-column: 1 / -1;
+   text-align: center;
+   padding-top: 24px;
+   border-top: 1px solid #e2e2e2;
+}
+
+/* Keranjang */
+
+/* Hitung Centang */
+body {
+   counter-reset: jumlah;
+}
+
+.pilih {
+   position: absolute;
+   opacity: 0;
+   width: 0;
+   height: 0;
+   pointer-events: none;
+}
+
+.pilih:checked {
+   counter-increment: jumlah;
+}
+
+#buka-keranjang {
+   display: none;
+}
+
+aside {
+   position: fixed;
+   top: 0;
+   right: 0;
+   z-index: 20;
+   width: min(400px, 100%);
+   height: 100%;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+   background: #fafafa;
+   border-left: 1px solid #e2e2e2;
+   transform: translateX(100%);
+   transition: transform .28s ease;
+}
+
+#buka-keranjang:checked ~ aside {
+   transform: none;
+}
+
+.drawer-atas {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   letter-spacing: .1em;
+   font-size: 13px;
+}
+
+.drawer-atas span::after {
+   content: counter(jumlah);
+}
+
+.drawer-atas label {
+   cursor: pointer;
+   font-size: 11px;
+   font-weight: 700;
+}
+
+aside ul {
+   flex: 1;
+   overflow-y: auto;
+}
+
+aside li {
+   display: none;
+   align-items: center;
+   justify-content: space-between;
+   gap: 12px;
+   padding: 12px 0;
+   border-bottom: 1px solid #e2e2e2;
+   font-size: 13px;
+}
+
+aside li label {
+   cursor: pointer;
+   font-size: 11px;
+   color: #666;
+   text-decoration: underline;
+}
+
+aside p {
+   font-size: 11px;
+   color: #666;
+}
+
+/* Label kosong */
+aside .kosong {
+   display: block;
+   color: #666;
+   border: 0;
+}
+
+body:has(.pilih:checked) aside .kosong {
+   display: none;
+}
+
+/* Item keranjang tampil kalau produknya dicentang (pola: produk nomor N -> item kN) */
+body:has(#p1:checked) #k1,
+body:has(#p2:checked) #k2,
+body:has(#p3:checked) #k3,
+body:has(#p4:checked) #k4,
+body:has(#p5:checked) #k5,
+body:has(#p6:checked) #k6,
+body:has(#p7:checked) #k7,
+body:has(#p8:checked) #k8,
+body:has(#p9:checked) #k9,
+body:has(#p10:checked) #k10,
+body:has(#p11:checked) #k11,
+body:has(#p12:checked) #k12,
+body:has(#p13:checked) #k13,
+body:has(#p14:checked) #k14,
+body:has(#p15:checked) #k15,
+body:has(#p16:checked) #k16,
+body:has(#p17:checked) #k17,
+body:has(#p18:checked) #k18,
+body:has(#p19:checked) #k19,
+body:has(#p20:checked) #k20,
+body:has(#p21:checked) #k21,
+body:has(#p22:checked) #k22,
+body:has(#p23:checked) #k23,
+body:has(#p24:checked) #k24,
+body:has(#p25:checked) #k25,
+body:has(#p26:checked) #k26,
+body:has(#p27:checked) #k27,
+body:has(#p28:checked) #k28,
+body:has(#p29:checked) #k29,
+body:has(#p30:checked) #k30,
+body:has(#p31:checked) #k31,
+body:has(#p32:checked) #k32,
+body:has(#p33:checked) #k33,
+body:has(#p34:checked) #k34,
+body:has(#p35:checked) #k35,
+body:has(#p36:checked) #k36,
+body:has(#p37:checked) #k37,
+body:has(#p38:checked) #k38,
+body:has(#p39:checked) #k39,
+body:has(#p40:checked) #k40,
+body:has(#p41:checked) #k41,
+body:has(#p42:checked) #k42,
+body:has(#p43:checked) #k43 {
+   display: flex;
+}
+
+@media (max-width: 600px) {
+   .hero {
+      padding: 36px 24px;
+   }
 }
