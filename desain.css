@@ -86,4 +86,111 @@ main > section {
   padding: 10px;
 }
 
-  
+header, footer {
+  padding-inline: max(20px, calc((100% - 1160px) / 2));
+}
+
+header {
+  position: sticky;
+  top: o;
+  z-index: 5;
+  background: #fafafa;
+  border-bottom: 1px solid #e2e2e2;
+  display: felx;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-block: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  background: none;
+  height: 38px;
+  max-width: 140px;
+  object-fill: contain;
+  border-radius: 0;
+} 
+
+.brand b {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.brand small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .24em;
+  color: #666;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav label {
+  cursor: pointer;
+  background: #0a0a0a;
+  color: #fafafa;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/*Penanda isi keranjang*/
+body:has(.pilih:checked) nav label::after {
+  content: "•";
+}
+
+/*Hero*/
+.hero {
+  display: flex;
+  flex-warp: warp;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 16px;
+  padding: 56px 48px;
+  border-radius: 28px;
+  background: #0a0a0a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.kicker {
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: #ccc;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6nw, 64px);
+  line-height: 1.05;
+  margin: 12px 0 18px;
+}
+
+.hero p:not(.kicker) {
+  max-width: 420px;
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+
+
