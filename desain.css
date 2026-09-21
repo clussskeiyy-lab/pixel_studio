@@ -187,4 +187,33 @@ body:has(.pilih:checked) nav label::after {
   margin-bottom: 26px;
 }
 
+/*Karakter*/
+.collage {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.collage img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  border-radius: 0;
+  background: none;
+}
+
+/*Gambar APP*/
+img {
+  display: block;
+  object-fit: cover;
+  border-radius: 26%
+  background: white;
+  color: #666;
+  font-size: 10px;
+  text-align: center;
+}
+
+/*Keuntungan dan Kategori*/
 
