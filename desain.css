@@ -351,3 +351,38 @@ details > p {
   white-space: pre-line;
 }
 
+/* Tombol Tambah */
+#katalog label {
+  display: block;
+  cursor: pointer;
+  padding: 11px 8px;
+  border-radius: 999px;
+  background: #0a0a0a;
+  color: #fafafa;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+#katalog label::after {
+  content: "TAMBAH KE KERANJANG";
+}
+
+#katalog article:has(.pilih:checked) label {
+  background: none;
+  color: #0a0a0a;
+  box-shadow: inset 0 0 0 1px #0a0a0a;
+}
+
+#katalog article:has(.pilih:checked) label::after {
+  content: "DI KERANJANG ✓";
+}
+
+.note {
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+  margin-top: 34px;
+}
+
