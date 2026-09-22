@@ -644,3 +644,67 @@ aside p {
    font-size: 11px;
    color: #666;
 }
+
+/* Label kosong */
+aside .kosong {
+   display: block;
+   color: #666;
+   border: 0;
+}
+
+body:has(.pilih:checked) aside .kosong {
+   display: none;
+}
+
+/* Item keranjang tampil kalau produknya dicentang (pola: produk nomor N -> item kN) */
+body:has(#p1:checked) #k1,
+body:has(#p2:checked) #k2,
+body:has(#p3:checked) #k3,
+body:has(#p4:checked) #k4,
+body:has(#p5:checked) #k5,
+body:has(#p6:checked) #k6,
+body:has(#p7:checked) #k7,
+body:has(#p8:checked) #k8,
+body:has(#p9:checked) #k9,
+body:has(#p10:checked) #k10,
+body:has(#p11:checked) #k11,
+body:has(#p12:checked) #k12,
+body:has(#p13:checked) #k13,
+body:has(#p14:checked) #k14,
+body:has(#p15:checked) #k15,
+body:has(#p16:checked) #k16,
+body:has(#p17:checked) #k17,
+body:has(#p18:checked) #k18,
+body:has(#p19:checked) #k19,
+body:has(#p20:checked) #k20,
+body:has(#p21:checked) #k21,
+body:has(#p22:checked) #k22,
+body:has(#p23:checked) #k23,
+body:has(#p24:checked) #k24,
+body:has(#p25:checked) #k25,
+body:has(#p26:checked) #k26,
+body:has(#p27:checked) #k27,
+body:has(#p28:checked) #k28,
+body:has(#p29:checked) #k29,
+body:has(#p30:checked) #k30,
+body:has(#p31:checked) #k31,
+body:has(#p32:checked) #k32,
+body:has(#p33:checked) #k33,
+body:has(#p34:checked) #k34,
+body:has(#p35:checked) #k35,
+body:has(#p36:checked) #k36,
+body:has(#p37:checked) #k37,
+body:has(#p38:checked) #k38,
+body:has(#p39:checked) #k39,
+body:has(#p40:checked) #k40,
+body:has(#p41:checked) #k41,
+body:has(#p42:checked) #k42,
+body:has(#p43:checked) #k43 {
+   display: flex;
+}
+
+@media (max-width: 600px) {
+   .hero {
+      padding: 36px 24px;
+   }
+}
