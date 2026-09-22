@@ -705,7 +705,7 @@ body:has(#p43:checked) #k43 {
 }
 
 @media (max-width: 600px) {
-   .hero {
+   .banner {
       padding: 36px 24px;
    }
 }
