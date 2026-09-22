@@ -505,3 +505,16 @@ details > p {
    width: 38px;
    height: 38px;
 }
+
+/* Geser */
+@keyframes geser {
+   to {
+      transform: translateX(-50%);
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .jalur {
+      animation: none;
+   }
+}
