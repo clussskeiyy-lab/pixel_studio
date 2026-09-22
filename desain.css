@@ -489,3 +489,19 @@ details > p {
    width: max-content;
    animation: geser 10s linear infinite;
 }
+
+/* Stop Sorot Mouse */
+.jalur:hover {
+   animation-play-state: paused;
+}
+
+.grup {
+   display: flex;
+   gap: 10px;
+   padding-right: 10px;
+}
+
+.grup img {
+   width: 38px;
+   height: 38px;
+}
