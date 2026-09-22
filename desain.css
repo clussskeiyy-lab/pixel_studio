@@ -162,7 +162,7 @@ body:has(.pilih:checked) nav label::after {
 /*Hero*/
 .banner {
   display: flex;
-  flex-warp: wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
@@ -705,7 +705,7 @@ body:has(#p43:checked) #k43 {
 }
 
 @media (max-width: 600px) {
-   .hero {
+   .banner {
       padding: 36px 24px;
    }
 }
