@@ -518,3 +518,41 @@ details > p {
       animation: none;
    }
 }
+
+/* Footer */
+footer {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 32px;
+   padding-block: 44px 32px;
+   border-top: 1px solid #e2e2e2;
+}
+
+footer h5 {
+   font-size: 11px;
+   letter-spacing: .12em;
+   margin-bottom: 14px;
+}
+
+footer li, footer p {
+   font-size: 12px;
+   color: #666;
+   margin-bottom: 8px;
+}
+
+footer .brand {
+   margin-bottom: 12px;
+   color: #0a0a0a;
+}
+
+footer .btn {
+   margin-top: 6px;
+}
+
+.hak {
+   grid-column: 1 / -1;
+   text-align: center;
+   padding-top: 24px;
+   border-top: 1px solid #e2e2e2;
+}
+
