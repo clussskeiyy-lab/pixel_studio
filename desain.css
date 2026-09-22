@@ -556,3 +556,91 @@ footer .btn {
    border-top: 1px solid #e2e2e2;
 }
 
+/* Keranjang */
+
+/* Hitung Centang */
+body {
+   counter-reset: jumlah;
+}
+
+.pilih {
+   position: absolute;
+   opacity: 0;
+   width: 0;
+   height: 0;
+   pointer-events: none;
+}
+
+.pilih:checked {
+   counter-increment: jumlah;
+}
+
+#buka-keranjang {
+   display: none;
+}
+
+aside {
+   position: fixed;
+   top: 0;
+   right: 0;
+   z-index: 20;
+   width: min(400px, 100%);
+   height: 100%;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+   background: #fafafa;
+   border-left: 1px solid #e2e2e2;
+   transform: translateX(100%);
+   transition: transform .28s ease;
+}
+
+#buka-keranjang:checked ~ aside {
+   transform: none;
+}
+
+.drawer-atas {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   letter-spacing: .1em;
+   font-size: 13px;
+}
+
+.drawer-atas span::after {
+   content: counter(jumlah);
+}
+
+.drawer-atas label {
+   cursor: pointer;
+   font-size: 11px;
+   font-weight: 700;
+}
+
+aside ul {
+   flex: 1;
+   overflow-y: auto;
+}
+
+aside li {
+   display: none;
+   align-items: center;
+   justify-content: space-between;
+   gap: 12px;
+   padding: 12px 0;
+   border-bottom: 1px solid #e2e2e2;
+   font-size: 13px;
+}
+
+aside li label {
+   cursor: pointer;
+   font-size: 11px;
+   color: #666;
+   text-decoration: underline;
+}
+
+aside p {
+   font-size: 11px;
+   color: #666;
+}
