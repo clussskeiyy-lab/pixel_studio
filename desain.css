@@ -475,3 +475,17 @@ details > p {
   margin: 0;
   text-align: left;
 }
+
+/* Logo 3 Lapis */
+.marquee {
+   flex: 1;
+   min-width: 260px;
+   overflow: hidden;
+   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.jalur {
+   display: flex;
+   width: max-content;
+   animation: geser 10s linear infinite;
+}
