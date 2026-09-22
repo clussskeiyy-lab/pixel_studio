@@ -162,7 +162,7 @@ body:has(.pilih:checked) nav label::after {
 /*Hero*/
 .banner {
   display: flex;
-  flex-warp: wrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
