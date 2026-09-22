@@ -156,7 +156,7 @@ nav label {
 
 /*Penanda isi keranjang*/
 body:has(.pilih:checked) nav label::after {
-  content: "•";
+  content: " •";
 }
 
 /*Hero*/
@@ -181,7 +181,7 @@ body:has(.pilih:checked) nav label::after {
 }
 
 .hero h1 {
-  font-size: clamp(36px, 6nw, 64px);
+  font-size: clamp(36px, 6vw, 64px);
   line-height: 1.05;
   margin: 12px 0 18px;
 }
@@ -214,7 +214,7 @@ body:has(.pilih:checked) nav label::after {
 img {
   display: block;
   object-fit: cover;
-  border-radius: 26%
+  border-radius: 26%;
   background: white;
   color: #666;
   font-size: 10px;
@@ -224,8 +224,9 @@ img {
 /*Keuntungan dan Kategori*/
 .fitur {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  border-block: 1px solid #e2e2e2;
+  padding: 0;
 }
 
 .fitur div {
@@ -321,13 +322,6 @@ img {
 
 #katalog article:hover img {
   transform: scale(1.03);
-}
-
-#katalog article summary img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  display: block;
 }
 
 #katalog h4 {
